@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Order Email & SMS Sender
 
-## Getting Started
+A simple web application for sending order notifications via email and SMS, and printing order PDFs.
 
-First, run the development server:
+## Core Features
 
+- Parse order XML files to extract contact information
+- Send email notifications
+- Open Google Messages for SMS
+- Print order PDFs
+- Modern, minimalist UI
+
+## Setup
+
+1. Install Node.js from https://nodejs.org/ (LTS version recommended)
+
+2. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Start the application:
+- Windows: Double-click `start.bat`
+- Command line: `npm run dev`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Open http://localhost:8000 in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## File Structure
 
-## Learn More
+- `Soubory/XML/` - Place order XML files here (format: Objednavka_OD24398493.xml)
+- `Soubory/PDF/` - Place order PDF files here (format: Objednavka_OD24398493.pdf)
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Enter the order code (format: OD24398493)
+2. Click "Send Message & Print PDF"
+3. The application will:
+   - Open your email client with a pre-filled message
+   - Open Google Messages with the SMS text
+   - Open the order PDF for printing

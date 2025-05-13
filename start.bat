@@ -1,0 +1,3 @@
+@echo off
+echo Starting Order Email & SMS Sender...
+npm run dev
